@@ -34,7 +34,7 @@ You’ve been hired to the Security Operations Center of the company Corporan Ca
 * Open up the .pcap file in Wireshark 📄
   ![image](https://github.com/user-attachments/assets/7d81aaa2-d14f-435b-bd19-a44b05419f68)
 
-Note: there are 60 packets, so use the display filter to sort out the unnecessary ones. Hits: we are looking for an email --> <b>smtp</>
+Note: there are 60 packets, so use the display filter to sort out the unnecessary ones. Hits: we are looking for an email --> <b>smtp<b/>
 
 You should get something like this:
 ![image](https://github.com/user-attachments/assets/f1c1d9a7-ffd0-4de3-9b04-5559988841b5)
@@ -47,7 +47,7 @@ you should get something like this:
 Now thart we have filtered out a single packet, we should see the info column that the mail is coming from the compromised user's account, but what we really want is the IP address: <b>10.10.1.4</b> because this tells us where within the network the rogue user performed these actions, and by taking a look at our DHCP log, we can match this information up to the name of the host computer that the rogue user acted from as well.
 Start by analyzing the .pcap file:
 
-### 2 - COrrelate to the Host Computer
+### 2 - Correlate to the Host Computer
 Use the DHCP log file to match the found IP address. DCHP (Dynamic Host Configuration Protocol) is how a server assigns IP addresses to hosts/devices on the network.
 * Open the DHCP log
 * Identify the six events that occurred right before 12:50PM and check whose IP address <b>10.10.1.4</b> belongs to
@@ -57,7 +57,7 @@ You should stop here and continue with the investigation by yourself but.... if 
 
 We should see that the event at 12:11:27PM does just what we were looking for and assigned the IP address used by the rogue user from our .pcap file to the host device <b>USER2</b>. Amazing! We now know which computer the rogue user acted from, and by taking a look at the security log from the host device, we should be able to determine which employee at the company was logged in during that time!
 
-### 3 - COrrelate to the Host Computer
+### 3 - Analyze the Security Log
 * Open the Security Log file with any word-processing program. (🪟 Microsoft Word, 🪟 WordPad, 🍏 Pages, 🍏 TextEdit, etc)
 * Take a moment to read through the logs. What do you notice?
 The first two were a logon/logoff session on host computer USER1, and the corresponding user section states this was by Jane Doe. The last two, however, were a logon/logoff session on host computer USER2.
