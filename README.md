@@ -29,6 +29,7 @@ You’ve been hired to the Security Operations Center of the company Corporan Ca
   1. SMTP.pcap
   2. DHCP.txt
   3. Security_log.rtf
+     
 **Note:** avaliable in the repository
 
 ### 1 - Find the IP Address
