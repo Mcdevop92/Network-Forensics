@@ -52,10 +52,11 @@ Use the DHCP log file to match the found IP address. DCHP (Dynamic Host Configur
 * Open the DHCP log
 * Identify the six events that occurred right before 12:50PM and check whose IP address <b>10.10.1.4</b> belongs to
     * hint: locate the event at 12:11:27PM
+      
 You should stop here and continue with the investigation by yourself but.... if you still need help continue in the next line
 ------------------------------------------------------------------------------------------------------------------------------------
 
-We should see that the event at 12:11:27PM does just what we were looking for and assigned the IP address used by the rogue user from our .pcap file to the host device <b>USER2</b>. Amazing! We now know which computer the rogue user acted from, and by taking a look at the security log from the host device, we should be able to determine which employee at the company was logged in during that time!
+Ok lets continue then... We should see that the event at 12:11:27PM does just what we were looking for and assigned the IP address used by the rogue user from our .pcap file to the host device <b>USER2</b>. Amazing! We now know which computer the rogue user acted from, and by taking a look at the security log from the host device, we should be able to determine which employee at the company was logged in during that time!
 
 ### 3 - Analyze the Security Log
 * Open the Security Log file with any word-processing program. (🪟 Microsoft Word, 🪟 WordPad, 🍏 Pages, 🍏 TextEdit, etc)
