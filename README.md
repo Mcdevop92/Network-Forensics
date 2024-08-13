@@ -21,7 +21,7 @@ You’ve been hired to the Security Operations Center of the company Corporan Ca
   - Installation Video: [YouTube](https://www.youtube.com/watch?v=vnX1NaF4K-Q)
 
 * **Wireshark** -->  [Download](https://www.wireshark.org/download.html)
-  - Installation Video:  [YouTube] (https://www.youtube.com/watch?v=4_7A8Ikp5Cc&t=21s)
+  - Installation Video: [YouTube](https://www.youtube.com/watch?v=4_7A8Ikp5Cc&t=21s)
 
 ## Getting Started 🤓
 
